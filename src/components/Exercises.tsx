@@ -2,13 +2,13 @@ import Image from 'next/image'
 
 const exercises = [
   { icon: '/icons/heart.png', label: 'Gratitude journaling' },
-  { icon: '/icons/magnifying-glass.png', label: 'Challenge anxiety' },
+  { icon: '/icons/magnifying-glass.png', label: 'Challenge anxious thoughts' },
   { icon: '/icons/signpost.png', label: 'Exploratory journaling' },
   { icon: '/icons/cloud.png', label: 'Meditation' },
   { icon: '/icons/pointing-hand.png', label: 'Breathwork' },
-  { icon: '/icons/shoe.png', label: 'Visualisation' },
+  { icon: '/icons/shoe.png', label: 'Visualisations' },
   { icon: '/icons/envelope.png', label: 'Affirmations' },
-  { icon: '/icons/puzzle.png', label: 'Action' },
+  { icon: '/icons/puzzle.png', label: 'Behavioural interventions' },
 ]
 
 export default function Exercises() {
@@ -21,7 +21,7 @@ export default function Exercises() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
               Exercises
               <br />
-              designed just
+              designed uniquely
               <br />
               for you
             </h2>
