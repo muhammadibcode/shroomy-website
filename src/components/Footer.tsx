@@ -26,10 +26,10 @@ export default function Footer() {
 
           {/* Navigation - right aligned */}
           <nav className="flex flex-wrap items-center justify-center md:justify-end gap-6 text-sm text-black">
-            <Link href="/privacy" className="hover:text-gray-700 transition-colors">
+            <Link href="/privacy-policy" className="hover:text-gray-700 transition-colors">
               Privacy
             </Link>
-            <Link href="/terms" className="hover:text-gray-700 transition-colors">
+            <Link href="/terms-conditions" className="hover:text-gray-700 transition-colors">
               Terms
             </Link>
             <a href="mailto:contact@momentapps.co.uk" className="hover:text-gray-700 transition-colors">
