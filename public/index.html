@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shroomy - Your Personal Anxiety Companion</title>
+  <meta name="description" content="Feel better with daily exercises designed just for you. Shroomy uses CBT and evidence-based techniques to help you reduce anxiety and build mental resilience.">
+  <meta name="apple-itunes-app" content="app-id=6737152971">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lavender: {
+              DEFAULT: '#D7D0FB',
+              light: '#F3E8F8',
+              dark: '#A89BD6',
+            },
+            success: '#6BCE70',
+            highlight: '#FFF7CC',
+          },
+          fontFamily: {
+            display: ['Dela Gothic One', 'system-ui', 'sans-serif'],
+            body: ['Manjari', 'system-ui', 'sans-serif'],
+          },
+          borderRadius: {
+            'pill': '50px',
+            'card': '24px',
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Manjari', system-ui, sans-serif;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Dela Gothic One', system-ui, sans-serif;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    @keyframes float-delayed {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+    }
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    .animate-float-delayed {
+      animation: float-delayed 6s ease-in-out infinite 2s;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes scroll-right {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+    .animate-scroll-left {
+      animation: scroll-left 40s linear infinite;
+    }
+    .animate-scroll-right {
+      animation: scroll-right 40s linear infinite;
+    }
+    .scroll-content:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+<body class="antialiased bg-white text-black">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-[#D7D0FB]/20">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <img src="images/app-icon.png" alt="Shroomy" width="40" height="40" class="rounded-xl">
+        <span class="text-2xl font-display gradient-text">Shroomy</span>
+      </a>
+      
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="/blog" class="text-black hover:text-gray-900 transition-colors">Blog</a>
+        <a href="/support" class="text-black hover:text-gray-900 transition-colors">Support</a>
+      </nav>
+
+      <a href="https://apps.apple.com/us/app/shroomy-daily-stress-relief/id6737152971" target="_blank" rel="noopener noreferrer" class="bg-black text-white px-5 py-2.5 rounded-[50px] text-sm font-medium hover:bg-gray-800 transition-colors">
+        Download
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-6 overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Left: Phone Mockup -->
+        <div class="relative flex justify-center md:justify-start order-2 md:order-1">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#D7D0FB]/60 to-[#F3E8F8]/40 rounded-[60px] blur-3xl scale-110"></div>
+            <img src="mockups/my-plan.png" alt="Shroomy app showing your personalized daily plan" width="320" class="relative z-10 drop-shadow-2xl animate-float">
+            <div class="absolute -right-8 top-1/4 z-20 animate-float-delayed">
+              <img src="images/shroomy-waving.png" alt="Shroomy mascot" width="100" class="drop-shadow-lg">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="text-center md:text-left order-1 md:order-2">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display leading-tight mb-6">
+            Your personal<br>
+            <span >anxiety companion</span>
+          </h1>
+          
+          <p class="text-xl text-black mb-8 max-w-lg">
+            Daily exercises designed just for you
+          </p>
+
+          <!-- App Store Badges -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
+            <a href="https://apps.apple.com/us/app/shroomy-daily-stress-relief/id6737152971" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="50">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.resetapp.reset" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="74" style="margin: -12px 0;">
+            </a>
+          </div>
+
+          <!-- Social Proof -->
+          <div class="flex items-center gap-2 justify-center md:justify-start text-black">
+            <div class="flex text-yellow-400 text-lg">★★★★★</div>
+            <span class="font-medium">4.8</span>
+            <span class="text-gray-400">·</span>
+            <span>10,000+ users</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exercises Section -->
+  <section class="py-24 px-6 bg-gradient-to-b from-white to-[#F3E8F8]/30">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Left: Stacked mockups -->
+        <div class="relative flex justify-center">
+          <div class="relative w-full max-w-md h-[550px]">
+            <div class="absolute left-0 top-8 z-10 transform -rotate-6">
+              <img src="mockups/gratitude-journal.png" alt="Gratitude journaling exercise" width="260" class="rounded-[40px] shadow-2xl">
+            </div>
+            <div class="absolute right-0 top-0 z-20 transform rotate-3">
+              <img src="mockups/task-complete.png" alt="Exercise completed celebration" width="260" class="rounded-[40px] shadow-2xl">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Content + Icons -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-display mb-6">
+            Exercises that actually<br>
+            <span >fit your life</span>
+          </h2>
+          
+          <p class="text-lg text-black mb-10 max-w-lg">
+            Every exercise is generated just for you—based on what you're going through, not a one-size-fits-all template.
+          </p>
+
+          <!-- Modality Icons Grid -->
+          <div class="grid grid-cols-5 gap-4 mb-6">
+            <div class="group flex flex-col items-center">
+              <div class="relative w-14 h-14 mb-2 transition-transform group-hover:scale-110 group-hover:-translate-y-1">
+                <img src="icons/magnifying-glass.png" alt="Challenge thoughts" class="w-full h-full object-contain drop-shadow-md">
+              </div>
+              <span class="text-[10px] text-gray-500 text-center leading-tight opacity-0 group-hover:opacity-100 transition-opacity">Challenge thoughts</span>
+            </div>
+            <div class="group flex flex-col items-center">
+              <div class="relative w-14 h-14 mb-2 transition-transform group-hover:scale-110 group-hover:-translate-y-1">
+                <img src="icons/pointing-hand.png" alt="Body awareness" class="w-full h-full object-contain drop-shadow-md">
+              </div>
+              <span class="text-[10px] text-gray-500 text-center leading-tight opacity-0 group-hover:opacity-100 transition-opacity">Body awareness</span>
+            </div>
+            <div class="group flex flex-col items-center">
+              <div class="relative w-14 h-14 mb-2 transition-transform group-hover:scale-110 group-hover:-translate-y-1">
+                <img src="icons/shoe.png" alt="Build momentum" class="w-full h-full object-contain drop-shadow-md">
+              </div>
+              <span class="text-[10px] text-gray-500 text-center leading-tight opacity-0 group-hover:opacity-100 transition-opacity">Build momentum</span>
+            </div>
+            <div class="group flex flex-col items-center">
+              <div class="relative w-14 h-14 mb-2 transition-transform group-hover:scale-110 group-hover:-translate-y-1">
+                <img src="icons/signpost.png" alt="Find direction" class="w-full h-full object-contain drop-shadow-md">
+              </div>
+              <span class="text-[10px] text-gray-500 text-center leading-tight opacity-0 group-hover:opacity-100 transition-opacity">Find direction</span>
+            </div>
+            <div class="group flex flex-col items-center">
+              <div class="relative w-14 h-14 mb-2 transition-transform group-hover:scale-110 group-hover:-translate-y-1">
+                <img src="icons/anchor.png" alt="Stay grounded" class="w-full h-full object-contain drop-shadow-md">
+              </div>
+              <span class="text-[10px] text-gray-500 text-center leading-tight opacity-0 group-hover:opacity-100 transition-opacity">Stay grounded</span>
+            </div>
+            <div class="group flex flex-col items-center">
+              <div class="relative w-14 h-14 mb-2 transition-transform group-hover:scale-110 group-hover:-translate-y-1">
+                <img src="icons/envelope.png" alt="Connect with others" class="w-full h-full object-contain drop-shadow-md">
+              </div>
+              <span class="text-[10px] text-gray-500 text-center leading-tight opacity-0 group-hover:opacity-100 transition-opacity">Connect</span>
+            </div>
+            <div class="group flex flex-col items-center">
+              <div class="relative w-14 h-14 mb-2 transition-transform group-hover:scale-110 group-hover:-translate-y-1">
+                <img src="icons/cloud.png" alt="Let go" class="w-full h-full object-contain drop-shadow-md">
+              </div>
+              <span class="text-[10px] text-gray-500 text-center leading-tight opacity-0 group-hover:opacity-100 transition-opacity">Let go</span>
+            </div>
+            <div class="group flex flex-col items-center">
+              <div class="relative w-14 h-14 mb-2 transition-transform group-hover:scale-110 group-hover:-translate-y-1">
+                <img src="icons/heart.png" alt="Be kind to yourself" class="w-full h-full object-contain drop-shadow-md">
+              </div>
+              <span class="text-[10px] text-gray-500 text-center leading-tight opacity-0 group-hover:opacity-100 transition-opacity">Self-kindness</span>
+            </div>
+            <div class="group flex flex-col items-center">
+              <div class="relative w-14 h-14 mb-2 transition-transform group-hover:scale-110 group-hover:-translate-y-1">
+                <img src="icons/puzzle.png" alt="Take action" class="w-full h-full object-contain drop-shadow-md">
+              </div>
+              <span class="text-[10px] text-gray-500 text-center leading-tight opacity-0 group-hover:opacity-100 transition-opacity">Take action</span>
+            </div>
+            <div class="group flex flex-col items-center">
+              <div class="relative w-14 h-14 mb-2 transition-transform group-hover:scale-110 group-hover:-translate-y-1">
+                <img src="icons/shield.png" alt="Protect your energy" class="w-full h-full object-contain drop-shadow-md">
+              </div>
+              <span class="text-[10px] text-gray-500 text-center leading-tight opacity-0 group-hover:opacity-100 transition-opacity">Boundaries</span>
+            </div>
+          </div>
+
+          <p class="text-sm text-gray-400">10 different approaches to help you feel better</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-24 px-6">
+    <div class="max-w-6xl mx-auto space-y-32">
+      <!-- Feature 1: Voice Chat (mockup right) -->
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="order-2 lg:order-1">
+          <h2 class="text-3xl md:text-4xl font-display mb-6">
+            Talk it out<br>
+            <span >anytime</span>
+          </h2>
+          <p class="text-lg text-black max-w-lg">
+            Voice or text—Shroomy listens without judgment. Get support whenever you need it, wherever you are.
+          </p>
+        </div>
+        <div class="order-1 lg:order-2 flex justify-center">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-tr from-[#D7D0FB]/40 to-[#6BCE70]/20 rounded-[60px] blur-3xl scale-110"></div>
+            <img src="mockups/voice-chat.png" alt="Voice chat with Shroomy" width="280" class="relative z-10 drop-shadow-2xl">
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2: Insight Unlocked (mockup left) -->
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="flex justify-center">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-bl from-[#D7D0FB]/40 to-[#FFF7CC]/30 rounded-[60px] blur-3xl scale-110"></div>
+            <img src="mockups/insight-unlocked.png" alt="Insight unlocked screen" width="280" class="relative z-10 drop-shadow-2xl">
+          </div>
+        </div>
+        <div>
+          <h2 class="text-3xl md:text-4xl font-display mb-6">
+            Discover what's<br>
+            <span >beneath</span>
+          </h2>
+          <p class="text-lg text-black max-w-lg">
+            Uncover patterns you didn't know you had. Shroomy helps you understand the "why" behind your feelings.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="py-24 overflow-hidden bg-gradient-to-b from-white to-[#F3E8F8]/40">
+    <div class="max-w-6xl mx-auto px-6 mb-12">
+      <h2 class="text-3xl md:text-4xl font-display text-center mb-4">
+        Loved by <span >10,000+ people</span>
+      </h2>
+      <p class="text-black text-center">See what our community has to say</p>
+    </div>
+
+    <div class="space-y-6">
+      <!-- Top row -->
+      <div class="overflow-hidden">
+        <div class="flex gap-6 animate-scroll-left scroll-content" style="width: max-content;">
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"The AI features are accurate but still personable. Many times with the insightful questions I've thought 'wow, you really get it' and to someone with anxiety that can be invaluable."</p>
+            <p class="text-xs text-gray-400">— KHWhitey on the App Store</p>
+          </div>
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"This app is my bff. Anytime my anxiety is out of control I go to this amazing app!"</p>
+            <p class="text-xs text-gray-400">— Smart Moms on the App Store</p>
+          </div>
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"I love it so much it actually helps me pour out all my emotions and get it off my chest and it understands me more than I even understand myself."</p>
+            <p class="text-xs text-gray-400">— hannah spitzer on the App Store</p>
+          </div>
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"Its so different than every other app for anxiety, this one forces you to deal and process your emotions in such a positive way."</p>
+            <p class="text-xs text-gray-400">— abraham on the App Store</p>
+          </div>
+          <!-- Duplicated for seamless loop -->
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"The AI features are accurate but still personable. Many times with the insightful questions I've thought 'wow, you really get it' and to someone with anxiety that can be invaluable."</p>
+            <p class="text-xs text-gray-400">— KHWhitey on the App Store</p>
+          </div>
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"This app is my bff. Anytime my anxiety is out of control I go to this amazing app!"</p>
+            <p class="text-xs text-gray-400">— Smart Moms on the App Store</p>
+          </div>
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"I love it so much it actually helps me pour out all my emotions and get it off my chest and it understands me more than I even understand myself."</p>
+            <p class="text-xs text-gray-400">— hannah spitzer on the App Store</p>
+          </div>
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"Its so different than every other app for anxiety, this one forces you to deal and process your emotions in such a positive way."</p>
+            <p class="text-xs text-gray-400">— abraham on the App Store</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom row -->
+      <div class="overflow-hidden">
+        <div class="flex gap-6 animate-scroll-right scroll-content" style="width: max-content;">
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"Having that external perspective available at anytime is such a help. I consider myself pretty self aware already but this really helps."</p>
+            <p class="text-xs text-gray-400">— Rudindustries on the App Store</p>
+          </div>
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"It really helps me when my Therapist isn't available. I made a lot of progress thanks to him ❤️"</p>
+            <p class="text-xs text-gray-400">— Caterina Andreoli on the App Store</p>
+          </div>
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"Daily highlights are inspired and the ability to look at trends is very insightful. This app is clean, dives deep enough to help, but not so invasive that it's crippling."</p>
+            <p class="text-xs text-gray-400">— ChaosCon on the App Store</p>
+          </div>
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"It will analyze what you said, point out what your limiting beliefs are, tell you your cognitive distortions, and then makes you rewrite what you really know is happening."</p>
+            <p class="text-xs text-gray-400">— TheSillySalmon on the App Store</p>
+          </div>
+          <!-- Duplicated for seamless loop -->
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"Having that external perspective available at anytime is such a help. I consider myself pretty self aware already but this really helps."</p>
+            <p class="text-xs text-gray-400">— Rudindustries on the App Store</p>
+          </div>
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"It really helps me when my Therapist isn't available. I made a lot of progress thanks to him ❤️"</p>
+            <p class="text-xs text-gray-400">— Caterina Andreoli on the App Store</p>
+          </div>
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"Daily highlights are inspired and the ability to look at trends is very insightful. This app is clean, dives deep enough to help, but not so invasive that it's crippling."</p>
+            <p class="text-xs text-gray-400">— ChaosCon on the App Store</p>
+          </div>
+          <div class="flex-shrink-0 w-80 bg-white rounded-[24px] p-6 shadow-lg border border-[#D7D0FB]/10">
+            <p class="text-black text-sm leading-relaxed mb-4">"It will analyze what you said, point out what your limiting beliefs are, tell you your cognitive distortions, and then makes you rewrite what you really know is happening."</p>
+            <p class="text-xs text-gray-400">— TheSillySalmon on the App Store</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="relative py-24 px-6 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="gradients/night-sky.png" alt="" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/5"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto text-center">
+      <div class="mb-8 flex justify-center">
+        <img src="images/shroomy-celebrating.png" alt="Shroomy celebrating" width="140" class="drop-shadow-2xl animate-float">
+      </div>
+
+      <h2 class="text-3xl md:text-5xl font-display mb-6 text-gray-900">
+        Start feeling better today
+      </h2>
+      
+      <p class="text-lg text-black mb-10">
+        Join 10,000+ people managing their anxiety with Shroomy
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://apps.apple.com/us/app/shroomy-daily-stress-relief/id6737152971" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="54">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=uk.co.resetapp.reset" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="80" style="margin: -13px 0;">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-[#D7D0FB]/20 py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="flex items-center gap-3">
+          <img src="images/app-icon.png" alt="Shroomy" width="36" height="36" class="rounded-lg">
+          <span class="text-xl font-display gradient-text">Shroomy</span>
+        </div>
+
+        <nav class="flex flex-wrap items-center justify-center gap-6 text-sm text-black">
+          <a href="/blog" class="hover:text-gray-900 transition-colors">Blog</a>
+          <a href="/support" class="hover:text-gray-900 transition-colors">Support</a>
+          <a href="/privacy" class="hover:text-gray-900 transition-colors">Privacy</a>
+          <a href="/terms" class="hover:text-gray-900 transition-colors">Terms</a>
+        </nav>
+
+        <div class="flex gap-3 items-center">
+          <a href="https://apps.apple.com/us/app/shroomy-daily-stress-relief/id6737152971" target="_blank" rel="noopener noreferrer" class="transition-opacity hover:opacity-80">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="36">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=uk.co.resetapp.reset" target="_blank" rel="noopener noreferrer" class="transition-opacity hover:opacity-80">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="54" style="margin: -9px 0;">
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-8 border-t border-gray-100 text-center">
+        <p class="text-sm text-gray-400">© 2025 Moment Apps. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

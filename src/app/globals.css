@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manjari:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-dela-gothic: 'Dela Gothic One', sans-serif;
+  --font-manjari: 'Manjari', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-manjari);
+  background: #FFFFFF;
+  color: #000000;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-dela-gothic);
+  color: #5C6193;
+}
+
+/* Smooth scroll for review rows */
+.scroll-container {
+  overflow: hidden;
+}
+
+.scroll-content {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+}
+
+/* Pause animation on hover */
+.scroll-content:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3E8F8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D7D0FB;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A89BD6;
+}
+
+/* Fade in animation for sections */
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.fade-section:nth-child(1) { animation-delay: 0.1s; }
+.fade-section:nth-child(2) { animation-delay: 0.2s; }
+.fade-section:nth-child(3) { animation-delay: 0.3s; }
+.fade-section:nth-child(4) { animation-delay: 0.4s; }
+.fade-section:nth-child(5) { animation-delay: 0.5s; }
