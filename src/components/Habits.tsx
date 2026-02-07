@@ -66,12 +66,12 @@ export default function Habits() {
                     alt="Your personalized daily plan"
                     width={280}
                     height={570}
-                    className="drop-shadow-2xl"
+                    className="drop-shadow-2xl w-[200px] h-auto lg:w-[280px]"
                   />
                 </div>
               </div>
-              {/* task-complete - emerges from the bottom */}
-              <div className="flex-shrink-0 lg:translate-y-32 -ml-4">
+              {/* task-complete - emerges from the bottom, hidden on mobile */}
+              <div className="hidden lg:block flex-shrink-0 lg:translate-y-32 -ml-4">
                 <div ref={taskCompleteRef} className="will-change-transform transition-none">
                   <Image
                     src="/mockups/task-complete.png"

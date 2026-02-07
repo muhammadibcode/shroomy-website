@@ -66,12 +66,12 @@ export default function Insights() {
                     alt="Insight unlocked"
                     width={230}
                     height={470}
-                    className="drop-shadow-2xl"
+                    className="drop-shadow-2xl w-[180px] h-auto lg:w-[230px]"
                   />
                 </div>
               </div>
-              {/* progress-insights - emerges from the top further, behind insight-unlocked */}
-              <div className="flex-shrink-0 lg:-translate-y-24 -ml-24 relative z-10">
+              {/* progress-insights - emerges from the top further, behind insight-unlocked, hidden on mobile */}
+              <div className="hidden lg:block flex-shrink-0 lg:-translate-y-24 -ml-24 relative z-10">
                 <div ref={progressInsightsRef} className="will-change-transform transition-none">
                   <Image
                     src="/mockups/progress-insights.png"
