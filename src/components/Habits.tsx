@@ -55,7 +55,7 @@ export default function Habits() {
           </div>
 
           {/* Content - can overflow the rectangle bounds */}
-          <div className="relative z-10 grid lg:grid-cols-2 items-center gap-8 px-8 md:px-12 lg:px-16 py-2 md:py-3 lg:py-4">
+          <div className="relative z-10 grid lg:grid-cols-2 items-center gap-8 px-2 md:px-12 lg:px-16 py-2 md:py-3 lg:py-4">
             {/* Left: Phone mockups */}
             <div className="flex justify-center items-center">
               {/* my-plan - emerges from the top */}
