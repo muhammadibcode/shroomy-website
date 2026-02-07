@@ -85,11 +85,9 @@ export default function Insights() {
             </div>
 
             {/* Right: Title */}
-            <div className="text-center lg:text-left -mt-16 lg:mt-0">
+            <div className="text-center lg:text-left -mt-24 lg:mt-0">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
-                Learn things
-                <br />
-                you didn't know
+                Learn more
                 <br />
                 about yourself
               </h2>
