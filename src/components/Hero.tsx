@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section className="pt-24 pb-10 md:pt-32 md:pb-8 px-8 md:px-12 lg:px-16">
+    <section className="pt-24 pb-16 md:pt-32 md:pb-8 px-8 md:px-12 lg:px-16">
       <div className="max-w-5xl mx-auto text-center">
         {/* Title with overlapping mascot */}
         <div className="relative">

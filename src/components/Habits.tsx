@@ -40,7 +40,7 @@ export default function Habits() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-24 px-8 md:px-12 lg:px-16">
+    <section ref={sectionRef} className="pt-8 pb-16 md:py-24 px-8 md:px-12 lg:px-16">
       <div className="max-w-6xl mx-auto">
         {/* Rounded rectangle with lavender background */}
         <div className="relative">
