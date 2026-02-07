@@ -59,14 +59,14 @@ export default function Habits() {
             {/* Left: Phone mockups */}
             <div className="flex justify-center items-center">
               {/* my-plan - emerges from the top */}
-              <div className="flex-shrink-0 lg:-translate-y-32">
+              <div className="flex-shrink-0 -translate-y-16 lg:-translate-y-32">
                 <div ref={myPlanRef} className="will-change-transform transition-none">
                   <Image
                     src="/mockups/my-plan.png"
                     alt="Your personalized daily plan"
                     width={280}
                     height={570}
-                    className="drop-shadow-2xl w-[200px] h-auto lg:w-[280px]"
+                    className="drop-shadow-2xl w-[230px] h-auto lg:w-[280px]"
                   />
                 </div>
               </div>
@@ -85,7 +85,7 @@ export default function Habits() {
             </div>
 
             {/* Right: Title */}
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-left -mt-10 lg:mt-0">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
                 A custom plan
                 <br />

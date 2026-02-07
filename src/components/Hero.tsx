@@ -24,12 +24,12 @@ export default function Hero() {
           </div>
 
           {/* Download buttons - mobile only */}
-          <div className="flex md:hidden flex-col items-center gap-3 mt-4">
+          <div className="flex md:hidden flex-col items-center gap-3 mt-4 w-56 mx-auto">
             <a
               href="https://apps.apple.com/us/app/shroomy-daily-stress-relief/id6737152971"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-lavender text-black px-5 py-2.5 rounded-pill text-sm font-body font-normal border border-black shadow-[0_3px_0_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity"
+              className="w-full text-center bg-lavender text-black px-6 py-3 rounded-pill text-base font-body font-normal border border-black shadow-[0_3px_0_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity"
             >
               Download (iOS)
             </a>
@@ -37,7 +37,7 @@ export default function Hero() {
               href="https://play.google.com/store/apps/details?id=uk.co.resetapp.reset"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-lavender text-black px-5 py-2.5 rounded-pill text-sm font-body font-normal border border-black shadow-[0_3px_0_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity"
+              className="w-full text-center bg-lavender text-black px-6 py-3 rounded-pill text-base font-body font-normal border border-black shadow-[0_3px_0_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity"
             >
               Download (Android)
             </a>

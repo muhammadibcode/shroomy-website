@@ -59,7 +59,7 @@ export default function Insights() {
             {/* Left: Phone mockups */}
             <div className="flex justify-center items-center">
               {/* insight-unlocked - emerges from the top, in front */}
-              <div className="flex-shrink-0 lg:translate-y-8 lg:translate-x-5 relative z-20">
+              <div className="flex-shrink-0 -translate-y-16 lg:translate-y-8 lg:translate-x-5 relative z-20">
                 <div ref={insightUnlockedRef} className="will-change-transform transition-none">
                   <Image
                     src="/mockups/insight-unlocked.png"
@@ -85,7 +85,7 @@ export default function Insights() {
             </div>
 
             {/* Right: Title */}
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-left -mt-10 lg:mt-0">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
                 Learn things
                 <br />
