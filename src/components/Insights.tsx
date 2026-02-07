@@ -45,7 +45,7 @@ export default function Insights() {
         {/* Rounded rectangle with lavender background */}
         <div className="relative">
           {/* Background - clipped to rounded rectangle */}
-          <div className="absolute inset-0 rounded-[300px] overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 -bottom-[75px] rounded-[300px] overflow-hidden">
             <Image
               src="/gradients/lavender.png"
               alt=""
