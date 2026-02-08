@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -23,19 +22,6 @@ export default function Hero() {
               priority
             />
           </div>
-
-          {/* Subtitle with contextual links */}
-          <p className="text-sm md:text-base text-black/70 font-body max-w-md mx-auto -mt-4 mb-2">
-            Understand your{' '}
-            <Link href="/anxiety-symptoms-quiz" className="underline underline-offset-2 hover:text-black transition-colors">
-              anxiety symptoms
-            </Link>
-            , reset your{' '}
-            <Link href="/nervous-system-quiz" className="underline underline-offset-2 hover:text-black transition-colors">
-              nervous system
-            </Link>
-            , and build daily CBT exercises tailored to you.
-          </p>
 
           {/* Download buttons - mobile only */}
           <div className="flex md:hidden flex-col items-center gap-3 mt-4 w-56 mx-auto">

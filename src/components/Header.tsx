@@ -23,18 +23,24 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-3">
-          <Link href="/anxiety-symptoms-quiz" className="bg-white text-black px-5 py-2.5 rounded-pill text-sm font-body font-normal border border-black shadow-[0_3px_0_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity">
-            Anxiety Quiz
-          </Link>
-          <Link href="/nervous-system-quiz" className="bg-white text-black px-5 py-2.5 rounded-pill text-sm font-body font-normal border border-black shadow-[0_3px_0_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity">
-            Nervous System Quiz
-          </Link>
+          <div className="relative group">
+            <button className="bg-white text-black px-5 py-2.5 rounded-pill text-sm font-body font-normal border border-black shadow-[0_3px_0_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity">
+              Quizzes
+            </button>
+            <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
+              <div className="bg-white rounded-2xl border border-black shadow-[0_3px_0_rgba(0,0,0,0.1)] py-2 min-w-[200px]">
+                <Link href="/anxiety-symptoms-quiz" className="block px-4 py-2.5 text-sm font-body hover:bg-lavender/30 transition-colors">
+                  Anxiety Symptoms Quiz
+                </Link>
+                <Link href="/nervous-system-quiz" className="block px-4 py-2.5 text-sm font-body hover:bg-lavender/30 transition-colors">
+                  Nervous System Quiz
+                </Link>
+              </div>
+            </div>
+          </div>
           <Link href="/blog" className="bg-white text-black px-5 py-2.5 rounded-pill text-sm font-body font-normal border border-black shadow-[0_3px_0_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity">
             Blog
           </Link>
-          <a href="mailto:contact@momentapps.co.uk" className="bg-white text-black px-5 py-2.5 rounded-pill text-sm font-body font-normal border border-black shadow-[0_3px_0_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity">
-            Support
-          </a>
           <a
             href="https://apps.apple.com/us/app/shroomy-daily-stress-relief/id6737152971"
             target="_blank"

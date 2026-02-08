@@ -25,6 +25,9 @@ export default function Exercises() {
               <br />
               for you
             </h2>
+            <p className="hidden lg:block text-sm text-black/60 font-body mt-3">
+              CBT journaling, breathwork & more
+            </p>
           </div>
 
           {/* Right: 4x2 grid of exercise types */}
