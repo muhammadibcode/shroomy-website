@@ -4,15 +4,18 @@ import Footer from '@/components/Footer'
 import QuizClient from './QuizClient'
 
 export const metadata: Metadata = {
-  title: 'Nervous System Dysregulation Test - Fight or Flight Quiz | Shroomy',
+  title: 'Nervous System Quiz - Are You Stuck in Fight or Flight?',
   description:
-    'Take this free quiz to find out if your nervous system is stuck in fight-or-flight mode. Learn about nervous system dysregulation and how to reset your nervous system.',
+    'Is your nervous system dysregulated? Take this free quiz to find out if you\'re stuck in fight-or-flight mode. Get personalized tips.',
   keywords:
-    'nervous system dysregulation test, fight or flight quiz, nervous system reset, regulate nervous system, how to calm nervous system, nervous system dysregulation symptoms',
+    'nervous system quiz, nervous system reset, dysregulated nervous system, fight or flight quiz, regulate nervous system, how to calm nervous system, nervous system dysregulation symptoms',
+  alternates: {
+    canonical: 'https://shroomyapp.com/nervous-system-quiz',
+  },
   openGraph: {
-    title: 'Is Your Nervous System Dysregulated? - Free Quiz | Shroomy',
+    title: 'Nervous System Quiz - Are You Stuck in Fight or Flight?',
     description:
-      'Discover if your body is stuck in fight-or-flight mode with this free quiz. Get personalised tips to regulate your nervous system.',
+      'Is your nervous system dysregulated? Take this free quiz to find out if you\'re stuck in fight-or-flight mode. Get personalized tips.',
     url: 'https://shroomyapp.com/nervous-system-quiz',
     siteName: 'Shroomy',
     images: [
@@ -27,9 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Is Your Nervous System Dysregulated? - Free Quiz | Shroomy',
+    title: 'Nervous System Quiz - Are You Stuck in Fight or Flight?',
     description:
-      'Discover if your body is stuck in fight-or-flight mode with this free quiz.',
+      'Is your nervous system dysregulated? Take this free quiz to find out if you\'re stuck in fight-or-flight mode. Get personalized tips.',
     images: ['/images/og-image.png'],
   },
 }
@@ -37,16 +40,10 @@ export const metadata: Metadata = {
 const quizSchema = {
   '@context': 'https://schema.org',
   '@type': 'Quiz',
-  name: 'Nervous System Dysregulation Test',
+  name: 'Is Your Nervous System Dysregulated?',
   description:
-    'An 8-question self-assessment quiz to help identify signs of nervous system dysregulation and whether your body is stuck in fight-or-flight mode.',
-  educationalAlignment: {
-    '@type': 'AlignmentObject',
-    alignmentType: 'educationalSubject',
-    targetName: 'Mental Health',
-  },
-  assesses: 'nervous system regulation',
-  numberOfQuestions: 8,
+    'Discover if your body is stuck in fight-or-flight mode with this quick assessment.',
+  educationalLevel: 'beginner',
   about: {
     '@type': 'MedicalCondition',
     name: 'Nervous System Dysregulation',

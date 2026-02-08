@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
 import { getAllPosts, getPostBySlug } from '@/lib/blog'
 import type { Metadata } from 'next'
 
@@ -10,9 +11,27 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = getPostBySlug(params.slug)
+  const url = `https://shroomyapp.com/blog/${params.slug}`
   return {
     title: `${post.title} - Shroomy`,
     description: post.excerpt,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: `${post.title} - Shroomy`,
+      description: post.excerpt,
+      url,
+      siteName: 'Shroomy',
+      type: 'article',
+      publishedTime: post.date,
+      modifiedTime: post.date,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${post.title} - Shroomy`,
+      description: post.excerpt,
+    },
   }
 }
 
@@ -89,8 +108,33 @@ function formatInlineText(text: string): React.ReactNode {
 export default function BlogPost({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug)
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    author: {
+      '@type': 'Organization',
+      name: 'Shroomy',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Shroomy',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://shroomyapp.com/images/app-icon.png',
+      },
+    },
+    datePublished: post.date,
+    dateModified: post.date,
+  }
+
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Header />
 
       <article className="pt-32 pb-16 md:pb-24 px-8 md:px-12 lg:px-16">
@@ -136,6 +180,37 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               >
                 Download for Android
               </a>
+            </div>
+          </div>
+
+          {/* Related Resources */}
+          <div className="mt-12 pt-8 border-t border-black/10">
+            <h2 className="text-lg md:text-xl font-display mb-4">
+              Related Resources
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Link
+                href="/anxiety-symptoms-quiz"
+                className="bg-white rounded-card p-5 border border-black shadow-[0_3px_0_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity"
+              >
+                <p className="text-sm font-bold font-body">
+                  Anxiety Symptoms Quiz
+                </p>
+                <p className="text-xs text-black/50 font-body mt-1">
+                  Free 2-minute self-assessment for anxiety symptoms
+                </p>
+              </Link>
+              <Link
+                href="/nervous-system-quiz"
+                className="bg-white rounded-card p-5 border border-black shadow-[0_3px_0_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity"
+              >
+                <p className="text-sm font-bold font-body">
+                  Nervous System Quiz
+                </p>
+                <p className="text-xs text-black/50 font-body mt-1">
+                  Are you stuck in fight-or-flight mode? Find out now
+                </p>
+              </Link>
             </div>
           </div>
         </div>

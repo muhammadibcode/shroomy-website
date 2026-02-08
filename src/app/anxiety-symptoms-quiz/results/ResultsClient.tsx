@@ -238,12 +238,23 @@ export default function ResultsClient() {
           professional.
         </p>
 
-        {/* Related blog posts */}
+        {/* Related resources */}
         <div className="border-t border-black/10 pt-8">
           <h3 className="text-lg font-display mb-4 text-center">
-            Learn More
+            Related Resources
           </h3>
           <div className="grid sm:grid-cols-2 gap-4">
+            <Link
+              href="/nervous-system-quiz"
+              className="bg-white rounded-card p-5 border border-black shadow-[0_3px_0_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity"
+            >
+              <p className="text-sm font-bold font-body">
+                Take the Nervous System Quiz
+              </p>
+              <p className="text-xs text-black/50 font-body mt-1">
+                Find out if your body is stuck in fight-or-flight mode
+              </p>
+            </Link>
             <Link
               href="/blog/how-to-reset-your-nervous-system"
               className="bg-white rounded-card p-5 border border-black shadow-[0_3px_0_rgba(0,0,0,0.1)] hover:opacity-90 transition-opacity"
@@ -263,7 +274,7 @@ export default function ResultsClient() {
                 What Is a Thought Record?
               </p>
               <p className="text-xs text-black/50 font-body mt-1">
-                Learn how CBT can help you challenge anxious thinking patterns
+                Learn how CBT thought records help challenge anxious thinking
               </p>
             </Link>
           </div>

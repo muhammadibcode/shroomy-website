@@ -4,15 +4,18 @@ import Footer from '@/components/Footer'
 import QuizClient from './QuizClient'
 
 export const metadata: Metadata = {
-  title: 'Anxiety Symptoms Test - Could Your Symptoms Be Anxiety? | Shroomy',
+  title: 'Anxiety Symptoms Quiz - Free 2-Min Self Assessment',
   description:
-    'Take this free 2-minute anxiety symptoms quiz to find out if your physical symptoms like nausea, dizziness, heartburn, or chest tightness could be caused by anxiety.',
+    'Could your symptoms be anxiety? Take this free quiz to understand what your body might be telling you. Instant results.',
   keywords:
-    'anxiety symptoms test, physical symptoms of anxiety quiz, does anxiety cause nausea, can stress cause dizziness, can anxiety cause heartburn, anxiety physical symptoms, anxiety self assessment',
+    'anxiety symptoms quiz, anxiety test, physical symptoms of anxiety quiz, does anxiety cause nausea, can stress cause dizziness, can anxiety cause heartburn, anxiety physical symptoms, anxiety self assessment',
+  alternates: {
+    canonical: 'https://shroomyapp.com/anxiety-symptoms-quiz',
+  },
   openGraph: {
-    title: 'Could Your Symptoms Be Anxiety? - Free Quiz | Shroomy',
+    title: 'Anxiety Symptoms Quiz - Free 2-Min Self Assessment',
     description:
-      'Take this free 2-minute quiz to understand what your body might be telling you. Covers nausea, dizziness, heart palpitations, and more.',
+      'Could your symptoms be anxiety? Take this free quiz to understand what your body might be telling you. Instant results.',
     url: 'https://shroomyapp.com/anxiety-symptoms-quiz',
     siteName: 'Shroomy',
     images: [
@@ -27,9 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Could Your Symptoms Be Anxiety? - Free Quiz | Shroomy',
+    title: 'Anxiety Symptoms Quiz - Free 2-Min Self Assessment',
     description:
-      'Take this free 2-minute quiz to understand what your body might be telling you.',
+      'Could your symptoms be anxiety? Take this free quiz to understand what your body might be telling you. Instant results.',
     images: ['/images/og-image.png'],
   },
 }
@@ -37,16 +40,10 @@ export const metadata: Metadata = {
 const quizSchema = {
   '@context': 'https://schema.org',
   '@type': 'Quiz',
-  name: 'Anxiety Symptoms Test',
+  name: 'Could Your Symptoms Be Anxiety?',
   description:
-    'A 10-question self-assessment quiz to help identify whether your physical symptoms could be related to anxiety.',
-  educationalAlignment: {
-    '@type': 'AlignmentObject',
-    alignmentType: 'educationalSubject',
-    targetName: 'Mental Health',
-  },
-  assesses: 'anxiety symptoms awareness',
-  numberOfQuestions: 10,
+    'A 2-minute quiz to help you understand if your physical symptoms might be related to anxiety.',
+  educationalLevel: 'beginner',
   about: {
     '@type': 'MedicalCondition',
     name: 'Anxiety',

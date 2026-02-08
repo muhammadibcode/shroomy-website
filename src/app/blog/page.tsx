@@ -5,8 +5,26 @@ import { getAllPosts } from '@/lib/blog'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Blog - Shroomy',
-  description: 'Tips, insights, and evidence-based techniques for managing anxiety and improving mental health.',
+  title: 'Shroomy Blog: Anxiety Tips, CBT Techniques & Mental Health',
+  description:
+    'Expert articles on managing anxiety, CBT techniques, nervous system regulation, and mental wellness. Evidence-based tips from Shroomy.',
+  alternates: {
+    canonical: 'https://shroomyapp.com/blog',
+  },
+  openGraph: {
+    title: 'Shroomy Blog: Anxiety Tips, CBT Techniques & Mental Health',
+    description:
+      'Expert articles on managing anxiety, CBT techniques, nervous system regulation, and mental wellness. Evidence-based tips from Shroomy.',
+    url: 'https://shroomyapp.com/blog',
+    siteName: 'Shroomy',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Shroomy Blog: Anxiety Tips, CBT Techniques & Mental Health',
+    description:
+      'Expert articles on managing anxiety, CBT techniques, nervous system regulation, and mental wellness. Evidence-based tips from Shroomy.',
+  },
 }
 
 export default function Blog() {

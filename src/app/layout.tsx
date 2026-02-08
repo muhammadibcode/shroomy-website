@@ -2,13 +2,20 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Shroomy - Your Personal Anxiety Companion',
-  description: 'Feel better with daily exercises designed just for you. Shroomy uses CBT and evidence-based techniques to help you reduce anxiety and build mental resilience.',
+  metadataBase: new URL('https://shroomyapp.com'),
+  title: 'Shroomy: #1 AI Anxiety & CBT App - Daily Exercises',
+  description:
+    'Reduce anxiety with personalized CBT exercises. AI-powered journaling, breathing techniques & insights. 4.8★ rated. Free to try.',
   keywords: 'anxiety app, cbt app, mental health app, anxiety relief, cbt journal, stress relief app',
   authors: [{ name: 'Moment Apps' }],
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: 'https://shroomyapp.com',
+  },
   openGraph: {
-    title: 'Shroomy - Your Personal Anxiety Companion',
-    description: 'Feel better with daily exercises designed just for you.',
+    title: 'Shroomy: #1 AI Anxiety & CBT App - Daily Exercises',
+    description:
+      'Reduce anxiety with personalized CBT exercises. AI-powered journaling, breathing techniques & insights. 4.8★ rated. Free to try.',
     url: 'https://shroomyapp.com',
     siteName: 'Shroomy',
     images: [
@@ -23,8 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shroomy - Your Personal Anxiety Companion',
-    description: 'Feel better with daily exercises designed just for you.',
+    title: 'Shroomy: #1 AI Anxiety & CBT App - Daily Exercises',
+    description:
+      'Reduce anxiety with personalized CBT exercises. AI-powered journaling, breathing techniques & insights. 4.8★ rated. Free to try.',
     images: ['/images/og-image.png'],
   },
   other: {
