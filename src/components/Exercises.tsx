@@ -2,10 +2,10 @@ import Image from 'next/image'
 
 const exercises = [
   { icon: '/icons/heart.png', label: 'Gratitude journaling' },
-  { icon: '/icons/magnifying-glass.png', label: 'Challenge anxious thoughts' },
+  { icon: '/icons/magnifying-glass.png', label: 'CBT (Cognitive behavioural therapy)' },
   { icon: '/icons/signpost.png', label: 'Exploratory journaling' },
-  { icon: '/icons/cloud.png', label: 'Meditation' },
-  { icon: '/icons/pointing-hand.png', label: 'Breathwork' },
+  { icon: '/icons/cloud.png', label: 'Meditation & breathwork' },
+  { icon: '/icons/pointing-hand.png', label: 'Nervous system regulation' },
   { icon: '/icons/shoe.png', label: 'Visualisations' },
   { icon: '/icons/envelope.png', label: 'Affirmations' },
   { icon: '/icons/puzzle.png', label: 'Behavioural interventions' },
@@ -25,9 +25,6 @@ export default function Exercises() {
               <br />
               for you
             </h2>
-            <p className="hidden lg:block text-sm text-black/60 font-body mt-3">
-              CBT journaling, breathwork & more
-            </p>
           </div>
 
           {/* Right: 4x2 grid of exercise types */}

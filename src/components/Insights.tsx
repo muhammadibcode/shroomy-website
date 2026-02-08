@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 
 export default function Insights() {
@@ -92,13 +91,6 @@ export default function Insights() {
                 <br />
                 about yourself
               </h2>
-              <p className="hidden lg:block text-sm text-black/60 font-body mt-3">
-                Track your{' '}
-                <Link href="/nervous-system-quiz" className="underline underline-offset-2 hover:text-black transition-colors">
-                  nervous system
-                </Link>
-                {' '}health
-              </p>
             </div>
           </div>
         </div>

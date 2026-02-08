@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 
 export default function Habits() {
@@ -90,14 +89,8 @@ export default function Habits() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
                 A plan
                 <br />
-                for your anxiety
+                for your anxiety<span className="hidden lg:inline"> symptoms</span>
               </h2>
-              <p className="hidden lg:block text-sm text-black/60 font-body mt-3">
-                Designed around your{' '}
-                <Link href="/anxiety-symptoms-quiz" className="underline underline-offset-2 hover:text-black transition-colors">
-                  anxiety symptoms
-                </Link>
-              </p>
             </div>
           </div>
         </div>
